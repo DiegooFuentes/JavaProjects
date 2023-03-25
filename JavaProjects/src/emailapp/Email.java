@@ -15,9 +15,9 @@ public class Email {
     private String companySuffix = ".google.com";
 
     //Constructor to receive the first name and last name
-    public Email(String firstName, String lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+    public Email() {
+        this.firstName = setName();
+        this.lastName = setName();
 
         //Call a method asking for the department - return the department
         this.department = setDepartment();
@@ -29,6 +29,21 @@ public class Email {
         email = firstName.toLowerCase() + "." + lastName.toLowerCase() + "@" + department + companySuffix;
         //System.out.println("Your email is: " + email);
         //System.out.println("your password is: " + this.password);
+    }
+
+    //Ask for the full name method
+    private String setName(){
+        System.out.println("Write your first name: ");
+        Scanner in = new Scanner(System.in);
+        String name = in.nextLine();
+        return name;
+    }
+
+    private String setLastName(){
+        System.out.println("Write your last name: ");
+        Scanner in = new Scanner(System.in);
+        String lastName = in.nextLine();
+        return lastName;
     }
 
     //Ask for the department method
@@ -79,9 +94,12 @@ public class Email {
 
     //Show all the data
     public String showInfo() {
-        return "DISPLAY NAME: " + firstName + " " + lastName +
-                "\nCOMPANY EMAIL: " + email +
-                "\nMAILBOX CAPACITY: " + mailboxCapacity + "mb";
+        return "*****************************************************" +
+                "\n - DISPLAY NAME: " + firstName + " " + lastName +
+                "\n - COMPANY EMAIL: " + email +
+                "\n - PASSWORD: " + password +
+                "\n - MAILBOX CAPACITY: " + mailboxCapacity + "mb" +
+                "\n*****************************************************";
     }
 
 }
