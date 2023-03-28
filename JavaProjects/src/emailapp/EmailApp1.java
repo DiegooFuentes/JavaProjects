@@ -2,7 +2,7 @@ package emailapp;
 
 import java.util.Scanner;
 
-public class EmailApp {
+public class EmailApp1 {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
@@ -15,7 +15,7 @@ public class EmailApp {
             createEmail = scanner.nextInt();
 
             if(createEmail==1){
-                Email email = new Email();
+                Email1 email = new Email1();
                 System.out.println(email.showInfo());
             }
 

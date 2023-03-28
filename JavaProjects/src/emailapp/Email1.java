@@ -1,9 +1,8 @@
 package emailapp;
 
-import java.sql.PseudoColumnUsage;
 import java.util.Scanner;
 
-public class Email {
+public class Email1 {
     private String firstName;
     private String lastName;
     private String department;
@@ -15,7 +14,7 @@ public class Email {
     private String companySuffix = ".google.com";
 
     //Constructor to receive the first name and last name
-    public Email() {
+    public Email1() {
         this.firstName = setName();
         this.lastName = setName();
 
