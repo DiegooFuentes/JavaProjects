@@ -18,6 +18,16 @@ public class EducationalEmail implements Email{
         System.out.println(showInfo());
     }
 
+    @Override
+    public void updatePassword() {
+
+    }
+
+    @Override
+    public void updateMailboxCapacity() {
+
+    }
+
     public EducationalEmail() {
         this.firstName = setFirstName();
         this.lastName = setLastName();

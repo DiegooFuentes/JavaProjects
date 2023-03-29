@@ -95,4 +95,18 @@ public class PersonalEmail implements Email{
                 "\n - MAILBOX CAPACITY: " + mailboxCapacity + "mb" +
                 "\n*****************************************************";
     }
+
+    @Override
+    public void updatePassword(){
+        String newPasword;
+        System.out.println("Enter your new password:");
+        Scanner scanner = new Scanner(System.in);
+        newPasword = scanner.nextLine();
+        this.password = newPasword;
+    }
+
+    @Override
+    public void updateMailboxCapacity(){
+        System.out.println("Mailbox capacity increased");
+    }
 }

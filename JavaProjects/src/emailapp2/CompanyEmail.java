@@ -2,7 +2,7 @@ package emailapp2;
 
 import java.util.Scanner;
 
-public class CompanyEmail implements Email{
+public class CompanyEmail implements Email {
     private String firstName;
     private String lastName;
     private String email;
@@ -17,6 +17,16 @@ public class CompanyEmail implements Email{
     @Override
     public void create() {
         System.out.println(showInfo());
+    }
+
+    @Override
+    public void updatePassword() {
+
+    }
+
+    @Override
+    public void updateMailboxCapacity() {
+
     }
 
     public CompanyEmail() {
