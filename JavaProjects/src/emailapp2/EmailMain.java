@@ -24,6 +24,29 @@ public class EmailMain {
                 if(emailType==1){
                     EmailAbstractFactory email = new PersonalEmailFactory();
                     Email personalEmail = email.orderEmail();
+
+                    int updatePreferences = 0;
+                    do {
+                        int option = 0;
+                        System.out.println("\n Enter 1 to update password" +
+                                "\n Enter 2 to update mailbox capacity" +
+                                "\n Enter 3 to exit");
+                        option = scanner.nextInt();
+
+                        if(option==1){
+                            personalEmail.updatePassword();
+                        }else if (option==2){
+                            personalEmail.updateMailboxCapacity();
+                        }else {
+                            break;
+                        }
+
+                        System.out.println("\n Would you like to update your data?" +
+                                "\n Enter 1 to update " +
+                                "\n Enter 2 to exit");
+                        updatePreferences = scanner.nextInt();
+                    }while (updatePreferences==1);
+
                 } else if (emailType==2) {
                     EmailAbstractFactory email = new CompanyEmailFactory();
                     Email companyEmail = email.orderEmail();
