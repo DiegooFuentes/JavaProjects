@@ -20,7 +20,11 @@ public class EducationalEmail implements Email{
 
     @Override
     public void updatePassword() {
-
+        String newPasword;
+        System.out.println("Enter your new password:");
+        Scanner scanner = new Scanner(System.in);
+        newPasword = scanner.nextLine();
+        this.password = newPasword;
     }
 
     @Override
