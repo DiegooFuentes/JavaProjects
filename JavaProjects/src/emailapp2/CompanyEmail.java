@@ -30,7 +30,12 @@ public class CompanyEmail implements Email {
 
     @Override
     public void updateMailboxCapacity() {
-
+        Integer newMailboxCapacity;
+        System.out.println("Enter your new mailbox capacity:");
+        Scanner scanner = new Scanner(System.in);
+        newMailboxCapacity = scanner.nextInt();
+        this.mailboxCapacity = newMailboxCapacity;
+        System.out.println("Mailbox capacity increased");
     }
 
     public CompanyEmail() {
