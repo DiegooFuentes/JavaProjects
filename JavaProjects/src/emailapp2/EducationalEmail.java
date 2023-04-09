@@ -29,7 +29,7 @@ public class EducationalEmail implements Email{
 
     @Override
     public void updateMailboxCapacity() {
-        Integer newMailboxCapacity;
+        int newMailboxCapacity;
         System.out.println("Enter your new mailbox capacity:");
         Scanner scanner = new Scanner(System.in);
         newMailboxCapacity = scanner.nextInt();
